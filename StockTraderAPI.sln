@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35825.156 d17.13
+VisualStudioVersion = 17.13.35825.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "StockTraderApi.API", "StockTraderApi.API", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -16,6 +16,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTraderApi.API", "StockTraderApi.API\StockTraderApi.API\StockTraderApi.API.csproj", "{EEA798F8-5189-4D60-92F1-573D90980AAD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTraderApi.Infrastructure", "StockTraderApi.Infrastructure\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure.csproj", "{2139BABE-BAA7-4BE4-ADAC-C96DEE8C8FA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockTraderApi.Domain", "StockTraderApi.Domain\StockTraderApi.Domain\StockTraderApi.Domain.csproj", "{66DD56B5-E57F-43D5-9FFA-9465FF97A304}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{2139BABE-BAA7-4BE4-ADAC-C96DEE8C8FA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2139BABE-BAA7-4BE4-ADAC-C96DEE8C8FA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2139BABE-BAA7-4BE4-ADAC-C96DEE8C8FA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66DD56B5-E57F-43D5-9FFA-9465FF97A304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66DD56B5-E57F-43D5-9FFA-9465FF97A304}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66DD56B5-E57F-43D5-9FFA-9465FF97A304}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66DD56B5-E57F-43D5-9FFA-9465FF97A304}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 		{7FEE3EA8-4667-4DF6-9A58-39A654CE51FF} = {218A594E-5C32-4E07-9B29-48DDFE85EA2B}
 		{EEA798F8-5189-4D60-92F1-573D90980AAD} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{2139BABE-BAA7-4BE4-ADAC-C96DEE8C8FA1} = {ED74E037-4EDC-448B-9EAA-7AD3786471F1}
+		{66DD56B5-E57F-43D5-9FFA-9465FF97A304} = {34718413-48D7-4A53-9AF6-B4D02C646810}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {76307F9B-57D0-4400-96DF-85554739EADA}
