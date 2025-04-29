@@ -1,9 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using StockTraderApi.Domain.Entities.Trade;
+using System.Reflection;
 
 namespace StockTraderApi.Infrastructure.Context
 {
@@ -12,12 +9,16 @@ namespace StockTraderApi.Infrastructure.Context
         public StockTraderDbContext(DbContextOptions<StockTraderDbContext> options)
             : base(options)
         {
+
         }
+
+        public DbSet<Trade> Trades { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
 
-
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         }
     }
 }

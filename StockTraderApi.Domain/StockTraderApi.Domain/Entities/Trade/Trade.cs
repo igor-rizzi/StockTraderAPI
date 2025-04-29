@@ -11,6 +11,8 @@ namespace StockTraderApi.Domain.Entities.Trade
     {
         public Guid Id { get; set; }
 
+        public long CodigoTrade { get; set; }
+
         public string UserId { get; set; } = default!;
 
         public string StockSymbol { get; set; } = default!;
@@ -21,7 +23,7 @@ namespace StockTraderApi.Domain.Entities.Trade
 
         public decimal PricePerUnit { get; set; }
 
-        public decimal TotalAmount => Quantity * PricePerUnit;
+        public decimal TotalAmount { get; set; }
 
         public DateTime TradeDate { get; set; }
 

@@ -1,12 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using StockTraderApi.Domain.Entities.Trade;
 
 namespace StockTraderApi.Infrastructure.Context.Configuration
 {
-    class TradeConfiguration
+    public class TradeConfiguration : IEntityTypeConfiguration<Trade>
     {
+        public void Configure(EntityTypeBuilder<Trade> builder)
+        {
+            builder.HasKey(t => t.Id);
+
+            builder.Property(t => t.CodigoTrade)
+                .ValueGeneratedOnAdd();
+
+            builder.Property(t => t.UserId);
+
+            builder.Property(t => t.StockSymbol)
+                .IsRequired()
+                .HasMaxLength(10);
+
+            builder.Property(t => t.OperationType)
+                .IsRequired();
+
+            builder.Property(t => t.Quantity);
+
+            builder.Property(t => t.PricePerUnit)
+                .HasPrecision(18, 7);
+
+            builder.Property(t => t.TotalAmount)
+                .HasPrecision(18, 7);
+
+            builder.Property(t => t.TradeDate);
+
+            builder.Property(t => t.CreatedAt)
+                .HasDefaultValueSql("CURRENT_TIMESTAMP");
+
+            builder.HasIndex(t => t.CodigoTrade)
+               .HasDatabaseName("IX_Trade_CodigoTrade")
+               .HasFilter("CodigoTrade IS NOT NULL");
+
+            builder.HasIndex(t => t.UserId)
+              .HasDatabaseName("IX_Trade_UserId");
+        }
     }
 }
