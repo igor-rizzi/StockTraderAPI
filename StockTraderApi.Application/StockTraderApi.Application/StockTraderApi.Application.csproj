@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\StockTraderApi.Domain\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using StockTraderApi.Domain.Entities.Trade;
+using StockTraderApi.Domain.Entities;
 using System.Reflection;
 
 namespace StockTraderApi.Infrastructure.Context

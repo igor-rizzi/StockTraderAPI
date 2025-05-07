@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using StockTraderApi.Domain.Entities.Trade;
+using StockTraderApi.Domain.Entities;
 
 namespace StockTraderApi.Infrastructure.Context.Configuration
 {

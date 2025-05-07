@@ -4,6 +4,7 @@ using StockTraderApi.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using Microsoft.EntityFrameworkCore;
 
 namespace StockTraderApi.API.Configuration
 {
@@ -11,6 +12,9 @@ namespace StockTraderApi.API.Configuration
     {
         public static IServiceCollection AddIdentityConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddDbContext<StockTraderIdentityContext>(options =>
+                options.UseNpgsql(configuration.GetConnectionString("StockTraderIdentityContext")));
+
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<StockTraderIdentityContext>()
                 .AddDefaultTokenProviders();

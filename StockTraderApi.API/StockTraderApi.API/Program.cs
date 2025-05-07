@@ -1,22 +1,16 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.IdentityModel.Tokens;
 using StockTraderApi.API.Configuration;
 using StockTraderApi.Infrastructure.Context;
-using StockTraderApi.Infrastructure.Identity;
-using StockTraderApi.Infrastructure.Identity.Models;
 using StockTraderApi.Infrastructure.Identity.Seed;
-using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
-builder.Services.AddDbContext<StockTraderIdentityContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("StockTraderIdentityContext")));
-
 builder.Services.AddIdentityConfiguration(builder.Configuration);
+
+builder.Services.ConfigureDependencyInjection();
 
 builder.Services.AddDbContext<StockTraderDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("StockTraderDbContext")));

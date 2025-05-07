@@ -19,6 +19,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\StockTraderApi.Application\StockTraderApi.Application\StockTraderApi.Application.csproj" />
+    <ProjectReference Include="..\..\StockTraderApi.Domain\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
     <ProjectReference Include="..\..\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure.csproj" />
   </ItemGroup>
 
