@@ -11,6 +11,7 @@ namespace StockTraderApi.API.Configuration
         {
             services.AddScoped<ITradeRepository, TradeRepository>();
             services.AddScoped<ITradeService, TradeService>();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
             return services;
         }
