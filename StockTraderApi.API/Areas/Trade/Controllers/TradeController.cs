@@ -22,6 +22,9 @@ namespace StockTraderApi.API.Areas.Trade.Controllers
             _mapper = mapper;
         }
 
+        /// <summary>
+        /// Retorna todos os trades do usuário.
+        /// </summary>
         [HttpGet]
         [Authorize]
         public async Task<IActionResult> Get()

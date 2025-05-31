@@ -11,6 +11,7 @@ namespace StockTraderApi.Infrastructure.Context.Configuration
             builder.HasKey(t => t.Id);
 
             builder.Property(t => t.CodigoTrade)
+                .HasColumnName("CodigoTrade")
                 .ValueGeneratedOnAdd();
 
             builder.Property(t => t.UserId);
@@ -36,8 +37,7 @@ namespace StockTraderApi.Infrastructure.Context.Configuration
                 .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
             builder.HasIndex(t => t.CodigoTrade)
-               .HasDatabaseName("IX_Trade_CodigoTrade")
-               .HasFilter("CodigoTrade IS NOT NULL");
+               .HasDatabaseName("IX_Trade_CodigoTrade");
 
             builder.HasIndex(t => t.UserId)
               .HasDatabaseName("IX_Trade_UserId");

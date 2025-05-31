@@ -1,9 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,9 +21,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\StockTraderApi.Application\StockTraderApi.Application\StockTraderApi.Application.csproj" />
-    <ProjectReference Include="..\..\StockTraderApi.Domain\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
-    <ProjectReference Include="..\..\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure.csproj" />
+    <ProjectReference Include="..\StockTraderApi.Application\StockTraderApi.Application.csproj" />
+    <ProjectReference Include="..\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
+    <ProjectReference Include="..\StockTraderApi.Infrastructure\StockTraderApi.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

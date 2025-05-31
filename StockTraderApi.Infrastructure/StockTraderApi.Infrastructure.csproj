@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\StockTraderApi.Domain\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
+    <ProjectReference Include="..\StockTraderApi.Domain\StockTraderApi.Domain.csproj" />
   </ItemGroup>
 
 </Project>

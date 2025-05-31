@@ -12,7 +12,7 @@ using StockTraderApi.Infrastructure.Context;
 namespace StockTraderApi.Infrastructure.Context.Migrations
 {
     [DbContext(typeof(StockTraderDbContext))]
-    [Migration("20250429001254_InitialMigration")]
+    [Migration("20250531200311_InitialMigration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -20,12 +20,12 @@ namespace StockTraderApi.Infrastructure.Context.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("StockTraderApi.Domain.Entities.Trade.Trade", b =>
+            modelBuilder.Entity("StockTraderApi.Domain.Entities.Trade", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,7 +33,8 @@ namespace StockTraderApi.Infrastructure.Context.Migrations
 
                     b.Property<long>("CodigoTrade")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("bigint");
+                        .HasColumnType("bigint")
+                        .HasColumnName("CodigoTrade");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<long>("CodigoTrade"));
 
@@ -71,8 +72,7 @@ namespace StockTraderApi.Infrastructure.Context.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("CodigoTrade")
-                        .HasDatabaseName("IX_Trade_CodigoTrade")
-                        .HasFilter("CodigoTrade IS NOT NULL");
+                        .HasDatabaseName("IX_Trade_CodigoTrade");
 
                     b.HasIndex("UserId")
                         .HasDatabaseName("IX_Trade_UserId");

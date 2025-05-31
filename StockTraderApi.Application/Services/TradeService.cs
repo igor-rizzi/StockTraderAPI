@@ -1,5 +1,4 @@
 ﻿using StockTraderApi.Application.Interfaces.Services;
-using StockTraderApi.Application.Models;
 using StockTraderApi.Domain.Entities;
 using StockTraderApi.Domain.Interfaces.Repositories;
 
@@ -8,7 +7,7 @@ namespace StockTraderApi.Application.Services
     public class TradeService : ITradeService
     {
 
-        private readonly ITradeRepository  _tradeRepository;
+        private readonly ITradeRepository _tradeRepository;
 
         public TradeService(ITradeRepository tradeRepository)
         {

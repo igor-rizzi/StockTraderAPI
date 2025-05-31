@@ -36,8 +36,7 @@ namespace StockTraderApi.Infrastructure.Context.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_Trade_CodigoTrade",
                 table: "Trades",
-                column: "CodigoTrade",
-                filter: "CodigoTrade IS NOT NULL");
+                column: "CodigoTrade");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Trade_UserId",
