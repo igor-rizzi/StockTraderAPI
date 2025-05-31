@@ -3,12 +3,12 @@
 
 ### Adicionar Migration no Banco do Identity
 ```bash
-dotnet ef migrations add InitialIdentityMigration --context StockTraderIdentityContext --startup-project ../StockTraderApi.API --output-dir Identity/Migrations
+dotnet ef migrations add [nomedamigration] --context StockTraderIdentityContext --startup-project ../StockTraderApi.API --output-dir Identity/Migrations
 ```
 
 ### Adicionar Migration no Banco da Aplicação
 ```bash
-dotnet ef migrations add InitialIdentityMigration --context StockTraderDbContext --startup-project ../StockTraderApi.API --output-dir Context/Migrations
+dotnet ef migrations add [nomedamigration] --context StockTraderDbContext --startup-project ../StockTraderApi.API --output-dir Context/Migrations
 ```
 
 ### Atualizar Banco do Identity
